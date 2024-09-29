@@ -1,0 +1,62 @@
+{# Voici la template de base, avec un beau commentaire qui ne se retrouvera pas dans le HTML :-) #}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Mon animal de compagnie</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="https://www.cegepgarneau.ca/favicon.ico"/>
+    <link rel="stylesheet" href="/static/css/styles.css"/>
+</head>
+
+<body>
+<header>
+     <a href="/"><h1>Mon animal de compagnie</h1></a>
+</header>
+<nav>
+    <ul>
+        <li>
+            <a href="/">Accueil</a>
+        </li>
+        <li>
+            <a href="/liste">Liste</a>
+        </li>
+        <li>
+            <a href="/information">Information</a>
+        </li>
+        <li>
+            <a href="/ajout+retrais">Condition</a>
+        </li>
+        <li>
+            <a href="/affichagetoutou">Jeux</a>
+        </li>
+        <li>
+            <a href="/variables">Variables Jinja</a>
+        </li>
+        <li>    
+            <a href="/a-propos">A-propos</a>
+        
+        </li>
+        
+    </ul>
+</nav>
+<main>
+    <h2>{{ titre }}</h2>
+
+    {% block contenu %}
+        <p>Voici une valeur par défaut</p>
+    {% endblock %}
+
+</main>
+
+<footer>
+    <a href="https://jinja.palletsprojects.com/en/3.0.x/templates/" target="_blank" title="jinja.palletsprojects.com">
+        Documentation officielle de Jinja
+    </a>
+</footer>
+
+</body>
+
+</html>
